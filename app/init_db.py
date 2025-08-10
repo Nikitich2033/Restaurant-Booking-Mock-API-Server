@@ -48,14 +48,33 @@ def init_sample_data() -> None:
             print("Sample data already exists, skipping initialization")
             return
 
-        # Create sample restaurant
-        restaurant = Restaurant(
-            name="TheHungryUnicorn",
-            microsite_name="TheHungryUnicorn"
-        )
-        db.add(restaurant)
-        db.commit()
-        db.refresh(restaurant)
+        # Create sample restaurants
+        restaurants_data = [
+            {
+                "name": "TheHungryUnicorn",
+                "microsite_name": "TheHungryUnicorn"
+            },
+            {
+                "name": "PizzaPalace", 
+                "microsite_name": "PizzaPalace"
+            },
+            {
+                "name": "SushiZen",
+                "microsite_name": "SushiZen"
+            },
+            {
+                "name": "CafeBistro",
+                "microsite_name": "CafeBistro"
+            }
+        ]
+        
+        restaurant_ids = []
+        for restaurant_data in restaurants_data:
+            restaurant = Restaurant(**restaurant_data)
+            db.add(restaurant)
+            db.commit()
+            db.refresh(restaurant)
+            restaurant_ids.append(restaurant.id)
 
         # Create sample availability slots for the next 30 days
         sample_times = [
@@ -71,20 +90,22 @@ def init_sample_data() -> None:
 
         start_date = datetime.now().date()
 
-        for i in range(30):  # Next 30 days
-            current_date = start_date + timedelta(days=i)
-            for slot_time in sample_times:
-                # Randomly make some slots unavailable
-                available = random.random() > 0.2  # 80% availability
+        # Create availability slots for all restaurants
+        for restaurant_id in restaurant_ids:
+            for i in range(30):  # Next 30 days
+                current_date = start_date + timedelta(days=i)
+                for slot_time in sample_times:
+                    # Randomly make some slots unavailable
+                    available = random.random() > 0.2  # 80% availability
 
-                slot = AvailabilitySlot(
-                    restaurant_id=restaurant.id,
-                    date=current_date,
-                    time=slot_time,
-                    max_party_size=8,
-                    available=available
-                )
-                db.add(slot)
+                    slot = AvailabilitySlot(
+                        restaurant_id=restaurant_id,
+                        date=current_date,
+                        time=slot_time,
+                        max_party_size=8,
+                        available=available
+                    )
+                    db.add(slot)
 
         # Create sample cancellation reasons
         cancellation_reasons = [

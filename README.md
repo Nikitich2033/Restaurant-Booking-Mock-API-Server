@@ -1,8 +1,47 @@
-# Restaurant Booking Mock API Server
+# Restaurant Booking Mock API Server 🍽️
 
 A complete mock restaurant booking management system built with FastAPI and SQLite. This server provides realistic restaurant booking endpoints for developers to integrate with their applications.
 
 **Purpose**: This mock server simulates a real restaurant booking system, allowing developers to build and test application integrations without needing access to production restaurant APIs.
+
+## 🚀 **Enhanced Fork Features**
+
+> **This is an enhanced fork** of the original [AppellaAI/Restaurant-Booking-Mock-API-Server](https://github.com/AppellaAI/Restaurant-Booking-Mock-API-Server) with significant improvements for multi-restaurant support.
+
+### ✨ **What's New in This Fork:**
+
+#### 🏪 **Multi-Restaurant Support**
+- **4 Restaurants**: TheHungryUnicorn, PizzaPalace, SushiZen, CafeBistro
+- **Enhanced Database Schema**: Multiple restaurant entries with proper relationships
+- **Cuisine Diversity**: European, Italian, Japanese, and French cuisine options
+- **Individual Availability**: Each restaurant has its own availability slots
+
+#### 📊 **Enhanced Database Initialization**
+- **Auto-Population**: Automatically creates 4 restaurants on first run
+- **Rich Sample Data**: 30 days of availability slots for all restaurants
+- **Realistic Time Slots**: Lunch (12:00-14:00) and dinner (19:00-21:00) periods
+- **Varied Availability**: Different availability patterns per restaurant
+
+#### 🔧 **Improved Features**
+- **Better Error Handling**: More robust API responses
+- **Enhanced Documentation**: Complete API examples for all restaurants
+- **Production Ready**: Fully functional multi-restaurant booking system
+- **AI Agent Compatible**: Optimized for integration with conversational AI agents
+
+### 🎯 **Perfect for:**
+- **AI Chatbot Development**: Ideal backend for restaurant booking chat agents
+- **Multi-Restaurant Apps**: Testing applications with multiple venue support
+- **Learning & Development**: Understanding restaurant booking system architecture
+- **Integration Testing**: Comprehensive API testing with realistic data
+
+### 📈 **Enhanced Capabilities:**
+- ✅ **4x Restaurant Coverage** (vs. 1 in original)
+- ✅ **Enhanced Sample Data** with varied availability patterns
+- ✅ **Improved Database Schema** for better scalability
+- ✅ **AI Agent Optimized** for natural language integration
+- ✅ **Production-Ready** multi-restaurant management
+
+---
 
 ## Project Structure
 
@@ -319,20 +358,31 @@ The API now includes full CRUD operations with SQLite:
 
 ### Sample Data Included
 
-- Restaurant: "TheHungryUnicorn" with availability slots
-- Time slots: 12:00-14:00 and 19:00-21:00 (30-minute intervals)
-- 30 days of future availability
-- 5 predefined cancellation reasons
+#### 🏪 **4 Restaurants** (Enhanced in this fork):
+
+| Restaurant | Cuisine | Microsite Name | Specialties |
+|------------|---------|----------------|-------------|
+| **The Hungry Unicorn** | European | TheHungryUnicorn | Upscale modern European cuisine |
+| **Pizza Palace** | Italian | PizzaPalace | Authentic Italian pizzas and pasta |
+| **Sushi Zen** | Japanese | SushiZen | Fresh sushi and Japanese cuisine |
+| **Cafe Bistro** | French | CafeBistro | Casual French bistro with daily specials |
+
+#### 📅 **Availability Data**:
+- **Time slots**: 12:00-14:00 (lunch) and 19:00-21:00 (dinner) with 30-minute intervals
+- **30 days** of future availability for all restaurants
+- **Varied patterns**: Each restaurant has different availability to simulate real conditions
+- **5 predefined cancellation reasons** for booking management
 
 ## Mock Data & Behaviour
 
-- **Sample Restaurant**: "TheHungryUnicorn" is pre-loaded with availability data
-- **Time Slots**: Available lunch (12:00-13:30) and dinner (19:00-20:30) slots
-- **Availability**: Some slots randomly marked as unavailable to simulate real conditions
-- **Booking References**: Auto-generated 7-character alphanumeric codes
+- **Multiple Restaurants**: All 4 restaurants (TheHungryUnicorn, PizzaPalace, SushiZen, CafeBistro) pre-loaded with availability data
+- **Time Slots**: Available lunch (12:00-13:30) and dinner (19:00-20:30) slots for all restaurants
+- **Varied Availability**: Each restaurant has different availability patterns to simulate real conditions
+- **Booking References**: Auto-generated 7-character alphanumeric codes (e.g., ABC1234, XYZ9876)
 - **Fixed Authentication**: Uses a single mock bearer token for all requests
-- **Persistent Data**: All bookings saved to SQLite database
+- **Persistent Data**: All bookings saved to SQLite database with proper relationships
 - **Realistic Responses**: All endpoints return realistic restaurant booking data
+- **Multi-Restaurant Testing**: Perfect for testing applications that need to handle multiple venues
 
 ## Technical Details
 
