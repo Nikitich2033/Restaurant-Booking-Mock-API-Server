@@ -6,7 +6,7 @@ A complete mock restaurant booking management system built with FastAPI and SQLi
 
 ## 🚀 **Enhanced Fork Features**
 
-> **This is an enhanced fork** of the original [AppellaAI/Restaurant-Booking-Mock-API-Server](https://github.com/AppellaAI/Restaurant-Booking-Mock-API-Server) with significant improvements for multi-restaurant support.
+> **This is an enhanced fork** of the original [AppellaAI/Restaurant-Booking-Mock-API-Server](https://github.com/AppellaAI/Restaurant-Booking-Mock-API-Server) for testing multi-restaurant support.
 
 ### ✨ **What's New in This Fork:**
 
@@ -22,26 +22,6 @@ A complete mock restaurant booking management system built with FastAPI and SQLi
 - **Realistic Time Slots**: Lunch (12:00-14:00) and dinner (19:00-21:00) periods
 - **Varied Availability**: Different availability patterns per restaurant
 
-#### 🔧 **Improved Features**
-- **Better Error Handling**: More robust API responses
-- **Enhanced Documentation**: Complete API examples for all restaurants
-- **Production Ready**: Fully functional multi-restaurant booking system
-- **AI Agent Compatible**: Optimized for integration with conversational AI agents
-
-### 🎯 **Perfect for:**
-- **AI Chatbot Development**: Ideal backend for restaurant booking chat agents
-- **Multi-Restaurant Apps**: Testing applications with multiple venue support
-- **Learning & Development**: Understanding restaurant booking system architecture
-- **Integration Testing**: Comprehensive API testing with realistic data
-
-### 📈 **Enhanced Capabilities:**
-- ✅ **4x Restaurant Coverage** (vs. 1 in original)
-- ✅ **Enhanced Sample Data** with varied availability patterns
-- ✅ **Improved Database Schema** for better scalability
-- ✅ **AI Agent Optimized** for natural language integration
-- ✅ **Production-Ready** multi-restaurant management
-
----
 
 ## Project Structure
 
